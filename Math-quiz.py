@@ -1,103 +1,44 @@
-# Provide user with 20 randomized math questions: addition, multiplication, 
-
-# subtraction, and division. Calculate the user's score and average based 
-
-# on getting the answer from the math quiz correct or incorrect. 
-
-# 
-
+# Provide user with 20 randomized math questions: addition, multiplication,
+#  subtraction, and division. Calculate the user's score and average based 
+# on getting the answer from the math quiz correct or incorrect.
+#  
 # Import time and random module 
-
 import random 
-
 import time 
-
-# 
-
 # Initialize score variable to 0 
-
 score = 0 
-
-# 
-
 #Initialize total questions/total right questions variable to 0 
-
 totalAdd_Q = 0 
-
-  
-
 totalRight_Add_Q = 0 
-
-  
-
 total_Mult_Q = 0 
-
-  
-
 totalRight_Mult_Q = 0 
-
-  
-
 total_Subt_Q = 0 
-
-  
-
 totalRight_Subt_Q = 0 
-
-  
-
 total_div_Q = 0 
-
-  
-
 totalRight_div_Q = 0 
-
 # Display name of program to user 
-
 print("Khurram's Magnificent Math Quiz!") 
-
 # Wait 3 seconds 
-
 time.sleep(3) 
-
 print() 
-
 # Ask user for their name and initialize to variable  
-
 userName = input("Hey there, what's your name? ") 
-
 print() 
-
 # Welcome and thank user for using the program 
-
 print("Welcome to Khurram's Magnificent Math Quiz {}, thanks for choosing us!" .format(userName)) 
-
 # Wait 2 seconds  
-
 time.sleep(2) 
-
 print() 
-
 # Start an infinite loop 
-
 while True: 
-
     # Ask user if they want to receive instructions 
-
     # If they say y give them instructions 
-
     # If they say n don't give them instructions 
-
     # If they enter invalid value print error message 
-
     instruction_choice = input("{}, would you like instructions (y/n)? " .format(userName)) 
-
     if(instruction_choice == "y" or instruction_choice == "n"): 
-
         break 
-
     print("Error, please enter a valid input!") 
-
 # Display instruction if y 
 
 if (instruction_choice == "y"): 
