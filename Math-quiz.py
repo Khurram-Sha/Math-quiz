@@ -40,131 +40,55 @@ while True:
         break 
     print("Error, please enter a valid input!") 
 # Display instruction if y 
-
 if (instruction_choice == "y"): 
-
     print() 
-
     print("This program will test you on 20 randomized addition, subtraction, multiplication, and division questions! You are required to press [Enter] after typing your response!") 
-
     # Wait 2 seconds  
-
     time.sleep(2) 
-
     print() 
-
     print("{} once you have answered all 20 questions, I will provide you with a score and percentage." .format(userName)) 
-
 # Tell user to press [Enter] when they are ready to start  
-
 print() 
-
 print("Press [Enter] when you want to start!") 
-
 input() 
-
 # Start a loop for 20 questions 
-
 for question_num in range(1,21): 
-
-    # 
-
     # Choose a randomized number out of 4 to choose addition, 
-
     # multiplication, subtraction, and division 
-
     random_number = random.randint(1,4) 
-
     # 
-
     # Initialize to variable find addition numbers from 1 to 20 to add 
-
     randAddNum1 = random.randint(1,20) 
-
-     
-
     randAddNum2 = random.randint(1,20) 
-
-    # 
-
     # Initialize to variable find two random multiplication numbers 
-
     # from 1 to 10  
-
-    randMultNum3 = random.randint(1,10) 
-
-     
-
+    randMultNum3 = random.randint(1,10)
     randMultNum4 = random.randint(1,10) 
-
-    # 
-
     # Two random subtraction numbers, with the largest number being 30 
-
-    # 
-
     randSubtNum5 = random.randint(1,15) 
-
-  
-
     randSubtNum6 = random.randint(1,15) 
-
-    # 
-
     # Two random division numbers, from 1 to 10 
-
     randDivNum7 = random.randint(1,10) 
-
-  
-
     randDivNum8 = random.randint(1,10) 
-
-    # 
-
     # Initialize correct addition answer to the sum of the two random numbers 
-
     correctAddResp = randAddNum1 + randAddNum2 
-
-    # 
-
     # Initialize correct multiplication answer to the product of random numbers 
-
     correctMultResp = randMultNum3 * randMultNum4 
-
-    # 
-
     # Reverse subtraction to addition in order to make the question 
-
-    Subt_reverse = randSubtNum5 + randSubtNum6 
-
-    # 
-
+    Subt_reverse = randSubtNum5 + randSubtNum6
     # Switch to subtraction by replacing the random number with the answer value 
-
     randSubtNum6 = Subt_reverse - randSubtNum5   
-
     # Reverse division to multiplication in order to make the question 
-
     div_reverse = randDivNum7 * randDivNum8 
-
     # Switch to division by replacing the random number with the answer value 
-
     randDivNum8 = div_reverse/randDivNum7 
-
-  
-
+    
 # If the random number of 1/4 is chosen ask addition question 
-
     if (random_number == 1): 
-
         # Ask user addition question with two random numbers 
-
         additionResponse = int(input("Get ready {}! What is {} + {}? " .format(userName,randAddNum1,randAddNum2))) 
-
         # Increase total questions by 1 
-
         totalAdd_Q = totalAdd_Q+1 
-
         if (additionResponse == correctAddResp): 
 
             # If the user is correct congratulate 
