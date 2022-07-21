@@ -90,235 +90,117 @@ for question_num in range(1,21):
         # Increase total questions by 1 
         totalAdd_Q = totalAdd_Q+1 
         if (additionResponse == correctAddResp): 
-
             # If the user is correct congratulate 
-
             print() 
-
             print("Nicely done {}, {} is the right answer!" .format(userName,additionResponse)) 
-
             print() 
-
             # Increase score by 1 
-
             score = score+1 
-
             # Increase total correct questions by 1 
-
             totalRight_Add_Q = totalRight_Add_Q + 1 
-
         else: 
-
             # If wrong tell user the correct answer 
-
             print() 
-
             print("Sorry you are incorrect, the correct answer is {}!" .format(correctAddResp)) 
-
             print() 
-
     # Elif random number is 2: ask multiplication question of two numbers 
-
     # between 1 and 10 
-
     elif (random_number == 2): 
-
-        # Ask user to answer multiplication question 
-
+         # Ask user to answer multiplication question 
         multiplicationResponse = int(input("Get ready {}! What is {} X {}? " .format(userName,randMultNum3,randMultNum4))) 
-
         # Increase total multiplication questions by 1 
-
         total_Mult_Q = total_Mult_Q + 1 
-
         if (multiplicationResponse == correctMultResp): 
-
             # If the user is correct congratulate 
-
             print() 
-
             print("Nicely done {}, {} is the right answer!" .format(userName,multiplicationResponse)) 
-
             print() 
-
             # Increase score by 1 
-
             score = score+1 
-
             # Increase total correct multiplication questions by 1 
-
             totalRight_Mult_Q = totalRight_Mult_Q + 1 
-
         else: 
-
-            # If wrong tell user the correct answer 
-
+             # If wrong tell user the correct answer 
             print() 
-
             print("You are incorrect {}, Multiplication can be quite difficult, the correct answer is {}!" .format(userName,correctMultResp)) 
-
             print() 
-
     # Elif random number is 3: ask subtraction question of two numbers 
-
     # with the largest being 30 
-
     elif (random_number == 3): 
-
         # Ask user to answer subtraction question 
-
         subtractionResponse = int(input("Get ready {}! What is {} - {}? " .format(userName,Subt_reverse,randSubtNum5))) 
-
         # Increase total subtractions questions asked 
-
         total_Subt_Q = total_Subt_Q + 1 
-
         # If the answer is correct congratulate 
-
         if (subtractionResponse == randSubtNum6): 
-
             print() 
-
             print("Nicely done {}, {} is the right answer!" .format(userName,randSubtNum6)) 
-
             print() 
-
             # Increase total score by 1 
-
             score=score+1 
-
             # Increase total right subtraction questions by 1 
-
             totalRight_Subt_Q = totalRight_Subt_Q + 1 
-
         else: 
-
             # If incorrect tell user they are incorrect and the correct answer 
-
             print() 
-
             print("You are incorrect {}, the correct answer is {}!" .format(userName,randSubtNum6)) 
-
             print() 
-
     # Elif random number is 4: ask division question of two random numbers with 
-
     # the largest being 10 
-
     elif (random_number == 4): 
-
         # Ask user for answer to division question 
-
         divisionResponse = int(input("Get ready {}! What is {} / {}? " .format(userName,div_reverse,randDivNum7))) 
-
         # Increase total division questions asked by 1 
-
         total_div_Q = total_div_Q + 1 
-
         # If the user response is correct congratulate  
-
         if (divisionResponse == randDivNum8): 
-
             print() 
-
             print("Nicely done {}, {} is the right answer!" .format(userName,divisionResponse)) 
-
             print() 
-
             # Increase total score by 1 
-
             score = score+1 
-
             # Increase total right division questions by 1 
-
             totalRight_div_Q = totalRight_div_Q + 1 
-
-             
-
         else: 
-
             # If incorrect tell user they are incorrect and the correct answer 
-
             print() 
-
             print("You are incorrect {}, the correct answer is {}!" .format(userName,randDivNum8)) 
-
-  
-
 # Initialize average variable 
-
 # Calculate average by dividing score by 20 and multiplying by 100 
-
 average = (score/20)*100 
-
 # 
-
 # Tell the user you will analyze the results of their quiz 
-
 print("Finally {}, this quiz is over, let's analyze how you did." .format(userName)) 
-
 print() 
-
 # 
-
 # If the users average is 100 tell user that it was perfect, 
-
 # as well as their percentage and score out of 20 
-
 if (average == 100): 
-
     print("Wow congratulations {}, you scored perfectly {}/20 questions correct, and had a percentage of {}%!" .format(userName,score,average)) 
-
     print() 
-
 # 
-
 # If the users average is 85 or above tell user they exceeded expectations 
-
 # as well as their percentage and score out of 20 
-
 elif (average >= 85): 
-
     print("You exceeded expectations {}, you scored {}/20 questions correct, and had a percentage of {}%!" .format(userName,score,average)) 
-
     print() 
-
 # 
-
 # If the users average is 70 or below tell them they did not meet expectations 
-
 # as well as their percentage and score out of 20 
-
 elif (average >= 70): 
-
     print("Well done {}, you met the expectations of this quiz scoring {}/20 questions correct, and achieving a percentage of {}%!" .format(userName,score,average)) 
-
     print() 
-
 elif (average < 70): 
-
     print("Work harder {}, you did not meet the expectations for this quiz scoring {}/20 questions correct, and achieving a percentage of {}%." .format(userName,score,average)) 
-
     print() 
-
 # Display the amount of addition, multiplication, subtraction and division 
-
 # questions the user got correct 
-
 print("Out of the {} addition questions you were given, you got {} correct!" .format(totalAdd_Q,totalRight_Add_Q)) 
-
 print() 
-
 print("Out of the {} multiplication questions you were given, you got {} correct!" .format(total_Mult_Q,totalRight_Mult_Q)) 
-
 print() 
-
 print("Out of the {} subtraction questions you were given, you got {} correct!" .format(total_Subt_Q,totalRight_Subt_Q)) 
-
 print() 
-
 print("Out of the {} division questions you were given, you got {} correct!" .format(total_div_Q,totalRight_div_Q)) 
-
 print() 
-
 print("Thanks again for using Khurram's Magnificent Math Quiz!") 
